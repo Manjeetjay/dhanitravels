@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #1e2022;
+  background-color: #FFF9F0;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  background: #FFF9F0;
+  color: #1e2022;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #EAA828;
+  color: #1E2022;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* ── Utility shells ─────────────────────── */
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-5 sm:px-6 lg:px-8;
+}
+
+.card-surface {
+  @apply rounded-2xl border border-brand-charcoal/10 bg-white p-6 shadow-soft backdrop-blur-sm transition-all duration-300;
+}
+
+.card-surface:hover {
+  @apply shadow-card-hover;
+}
+
+.form-input {
+  @apply w-full rounded-xl border border-brand-charcoal/15 bg-white px-4 py-3 text-sm text-brand-charcoal outline-none transition-all duration-200 focus:border-brand-teal focus:ring-2 focus:ring-brand-teal/20;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-charcoal px-6 py-3 text-sm font-bold text-white transition-all duration-300 hover:bg-brand-slate hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl border border-brand-charcoal/15 px-6 py-3 text-sm font-bold text-brand-charcoal transition-all duration-300 hover:border-brand-teal hover:text-brand-teal;
+}
+
+.btn-gold {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #EAA828 0%, #D4A836 50%, #F5B041 100%);
+  padding: 1rem 2rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #1E2022;
+  box-shadow: 0 0 30px rgba(234, 168, 40, 0.15);
+  transition: all 0.3s;
+}
+
+.btn-gold:hover {
+  box-shadow: 0 0 40px rgba(234, 168, 40, 0.3);
+  transform: scale(1.02);
+}
+
+/* ── Premium decorative line ────────────── */
+
+.gold-line {
+  height: 4px;
+  width: 48px;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, #EAA828, #D4A836, #F5B041);
+}
+
+/* ── Scrollbar styling ──────────────────── */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FFF9F0;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(30, 32, 34, 0.2);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(30, 32, 34, 0.35);
+}
