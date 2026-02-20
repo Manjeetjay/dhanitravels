@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: dhani-client
+    runtime: static
+    region: singapore
+    buildCommand: npm install && npm run build
+    staticPublishPath: dist
+    plan: free
+    envVars:
+      - key: VITE_API_URL
+        sync: false
+      - key: VITE_ADMIN_API_URL
+        sync: false
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html

@@ -1,0 +1,24 @@
+services:
+  - type: web
+    name: dhani-api
+    runtime: node
+    region: singapore
+    buildCommand: npm install
+    startCommand: node src/index.js
+    plan: free
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: FRONTEND_ORIGIN
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: WHATSAPP_NUMBER
+        sync: false
+      - key: ADMIN_PANEL_KEY
+        sync: false
+      - key: SUPABASE_STORAGE_BUCKET
+        value: agency-images
+    healthCheckPath: /health
