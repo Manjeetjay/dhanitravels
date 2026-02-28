@@ -4,9 +4,11 @@ const packageRoutes = require("./packageRoutes");
 const hotelRoutes = require("./hotelRoutes");
 const leadRoutes = require("./leadRoutes");
 const settingsRoutes = require("./settingsRoutes");
+const healthRoutes = require("./healthRoutes");
 
 const router = express.Router();
 
+router.use("/health", healthRoutes);
 router.use("/destinations", destinationRoutes);
 router.use("/packages", packageRoutes);
 router.use("/hotels", hotelRoutes);
